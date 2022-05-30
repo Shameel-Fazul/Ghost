@@ -73,8 +73,6 @@ try:
 
     # else:
     #     print("You're using a supported python version, " + str(pythonVersion))
-    
-    os.system("sudo apt-get install libportaudio2")
 
     def install(package):
         os.system(f"{sys.executable} -m pip install {package}")
