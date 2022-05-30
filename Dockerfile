@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
+RUN apt-get install libportaudio2
 FROM python:3.8
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install libportaudio2
 
 WORKDIR /app
 
