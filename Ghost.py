@@ -673,8 +673,12 @@ async def example(Ghost):
     ''')
         f.close()
     if json.load(open("config.json"))["token"] == "":
-        token = os.environ.get('DISCORD_TOKEN')
-        if token is None: sys.exit('Docker : Your discord token ($TOKEN) environment variable has not been set.')
+        os.system("cls")
+        os.system("clear")
+        print("")
+        print("Please input your Discord token below.".center(os.get_terminal_size().columns))
+        print("")
+        token = input()
 
         config = json.load(open("config.json"))
         config["token"] = (token)
