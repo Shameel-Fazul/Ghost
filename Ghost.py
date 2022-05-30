@@ -199,9 +199,9 @@ try:
     except ModuleNotFoundError:
         install("pygame")        
 
-    if os.name == "posix":
-        if str(subprocess.check_output(["apt-cache", "policy", "libportaudio2"])).split("\\n")[1][2:].split(": ")[1] == "(none)":
-            os.system("sudo apt-get install libportaudio2")
+#     if os.name == "posix":
+#         if str(subprocess.check_output(["apt-cache", "policy", "libportaudio2"])).split("\\n")[1][2:].split(": ")[1] == "(none)":
+#             os.system("sudo apt-get install libportaudio2")
 
     try:
         import sounddevice
