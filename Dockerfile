@@ -7,7 +7,7 @@ RUN apt-get install -y python-pip python-dev build-essential
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
