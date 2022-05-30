@@ -1,9 +1,12 @@
-FROM python:3.8.13-slim-bullseye
+FROM ubuntu:bionic
+
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
+RUN apt-get install -y libportaudio2
 
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
-RUN apt-get update && sudo apt-get install libportaudio2
 RUN pip3 install -r requirements.txt
 
 COPY . .
